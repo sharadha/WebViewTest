@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Objec / Javascript communication</title>
+  <style>
+  	body
+  	{
+	  	background-color: #ffffd6;
+  	}
+  	h1
+  	{
+	  	width:100%;
+	  	text-align: center;
+  	}
+  </style>
+  <script type="text/javascript">
+  	var hostApp = "";
+  	/**
+  	* Set the host type
+  	*/
+  	function setHostApp(appType)
+  	{
+	  	hostApp = appType;
+  	}
+  	/**
+  	* Say hello
+  	*/
+  	function sayHello()
+  	{
+	  	alert("sayHello!");
+	  	if(hostApp == "Android")
+	  	{
+		  	Android.showToast("test");
+	  	}
+	  	else if(hostApp == "iOS")
+	  	{
+		  	window.location = "app://test";
+	  	}
+	  	
+  	}
+  </script>
+</head>
+<body>
+  <h1>
+  	Hello there i am html!!! <a href="javascript:sayHello();">click me!</a>
+  </h1>
+</body>
+</html>

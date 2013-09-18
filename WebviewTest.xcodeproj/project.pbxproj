@@ -23,6 +23,7 @@
 		07DAE496178711CD0055BFDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07DAE471178711CD0055BFDD /* Foundation.framework */; };
 		07DAE49E178711CD0055BFDD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 07DAE49C178711CD0055BFDD /* InfoPlist.strings */; };
 		07DAE4A1178711CD0055BFDD /* WebviewTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 07DAE4A0178711CD0055BFDD /* WebviewTestTests.m */; };
+		7B3A21D417E9A740007C92DE /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 7B3A21D317E9A740007C92DE /* index.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		07DAE49D178711CD0055BFDD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		07DAE49F178711CD0055BFDD /* WebviewTestTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebviewTestTests.h; sourceTree = "<group>"; };
 		07DAE4A0178711CD0055BFDD /* WebviewTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebviewTestTests.m; sourceTree = "<group>"; };
+		7B3A21D317E9A740007C92DE /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 		07DAE475178711CD0055BFDD /* WebviewTest */ = {
 			isa = PBXGroup;
 			children = (
+				7B3A21D217E9A71F007C92DE /* html */,
 				07DAE47E178711CD0055BFDD /* AppDelegate.h */,
 				07DAE47F178711CD0055BFDD /* AppDelegate.m */,
 				07DAE487178711CD0055BFDD /* ViewController.h */,
@@ -158,6 +161,14 @@
 				07DAE49C178711CD0055BFDD /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7B3A21D217E9A71F007C92DE /* html */ = {
+			isa = PBXGroup;
+			children = (
+				7B3A21D317E9A740007C92DE /* index.html */,
+			);
+			name = html;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,6 +245,7 @@
 				07DAE47A178711CD0055BFDD /* InfoPlist.strings in Resources */,
 				07DAE482178711CD0055BFDD /* Default.png in Resources */,
 				07DAE484178711CD0055BFDD /* Default@2x.png in Resources */,
+				7B3A21D417E9A740007C92DE /* index.html in Resources */,
 				07DAE486178711CD0055BFDD /* Default-568h@2x.png in Resources */,
 				07DAE48C178711CD0055BFDD /* ViewController.xib in Resources */,
 			);
@@ -453,6 +465,7 @@
 				07DAE4A6178711CD0055BFDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07DAE4A7178711CD0055BFDD /* Build configuration list for PBXNativeTarget "WebviewTestTests" */ = {
 			isa = XCConfigurationList;
@@ -461,6 +474,7 @@
 				07DAE4A9178711CD0055BFDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

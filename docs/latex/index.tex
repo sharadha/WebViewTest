@@ -1,0 +1,30 @@
+\hypertarget{index_intro_sec}{}\section{Sample Project \-: Web\-View\-Test}\label{index_intro_sec}
+The Web\-View\-Test project is an example of how to create 2 way communication with content loaded inside a Web\-View using Javascript
+
+The included index.\-html file can communicate back via javascript with a host i\-O\-S or Android app. For this example only the i\-O\-S callback is relevant.\hypertarget{index_objc_to_java}{}\subsection{Objective C to Javascript}\label{index_objc_to_java}
+Objective C to Javascript communication is achieved with the Web\-View method \mbox{[}webview string\-By\-Evaluating\-Java\-Script\-From\-String\-:string\mbox{]} refer to Apple's documentation for further details.
+
+In this example we use this communications in the \hyperlink{interface_view_controller}{View\-Controller} class on the methods test\-Javascript\-:(id)sender and web\-View\-Did\-Finish\-Load\-:(\-U\-I\-Web\-View $\ast$)web\-View.
+
+The javascript calls used for Objective C to Javascript in the html are\-:
+
+
+\begin{DoxyItemize}
+\item set\-Host\-App(\char`\"{}i\-O\-S\char`\"{})
+\end{DoxyItemize}
+
+Sets an internal variable (host\-App) that specifies if the host app is i\-O\-S or Android to later perform Javascript to Objective C communication\hypertarget{index_java_to_objc}{}\subsection{Javascript to Objective C}\label{index_java_to_objc}
+Javascript to Objective C communication is achieved via the Web\-View\-Delegate method web\-View\-:(\-U\-I\-Web\-View $\ast$)web\-View should\-Start\-Load\-With\-Request\-:(\-N\-S\-U\-R\-L\-Request $\ast$)request navigation\-Type\-:(\-U\-I\-Web\-View\-Navigation\-Type)navigation\-Type refer to Apple's documentation for further details.
+
+The Javascript call that communicates back to Objective C is
+
+
+\begin{DoxyItemize}
+\item say\-Hello()
+\end{DoxyItemize}
+
+This function will communicate with the host app. It supports communication to i\-O\-S and to Android
+
+Once the content is loaded on the Web\-View, we make a call to set\-Host\-App(\char`\"{}i\-O\-S\char`\"{}) to specify i\-O\-S as the host app. After that, the javascript call say\-Hello() will use the internal variable host\-App to use the appropiate communication method.
+
+For i\-O\-S it will be to attempt to launch a custom scheme 'app\-://test' that we can detect in the (U\-I\-Web\-View $\ast$)web\-View should\-Start\-Load\-With\-Request\-:(\-N\-S\-U\-R\-L\-Request $\ast$)request navigation\-Type\-:(\-U\-I\-Web\-View\-Navigation\-Type)navigation\-Type Web\-View delegate method 

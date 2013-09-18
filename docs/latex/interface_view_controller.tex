@@ -1,0 +1,150 @@
+\hypertarget{interface_view_controller}{\section{View\-Controller Class Reference}
+\label{interface_view_controller}\index{View\-Controller@{View\-Controller}}
+}
+
+
+{\ttfamily \#import $<$View\-Controller.\-h$>$}
+
+Inheritance diagram for View\-Controller\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_view_controller}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(void) -\/ \hyperlink{interface_view_controller_aa8418c79310bb5f7235485aae32296e7}{view\-Did\-Load}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\begin{DoxyCompactList}\small\item\em view\-Did\-Load executed when the view has loaded \end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_view_controller_a594064ed32a3f907d3055adb615b8662}{did\-Receive\-Memory\-Warning}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\begin{DoxyCompactList}\small\item\em default did\-Receive\-Memory\-Warning \end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_view_controller_a6bf5e01d692477bccb7fd038adf226cb}{test\-Javascript\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Call triggered by the test button. \end{DoxyCompactList}\item 
+(void) -\/ \hyperlink{interface_view_controller_a2de1bcd263bb715f7a8edc6c2a658a9e}{web\-View\-Did\-Finish\-Load\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Webview delegate method called when content on the Web\-View has finished loading. \end{DoxyCompactList}\item 
+(B\-O\-O\-L) -\/ \hyperlink{interface_view_controller_a4176871569ddf10cd79a9fc6e5e340bb}{web\-View\-:should\-Start\-Load\-With\-Request\-:navigation\-Type\-:}{\ttfamily  \mbox{[}implementation\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Webview delegate method called before loading a request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+I\-B\-Outlet U\-I\-Button $\ast$ \hyperlink{interface_view_controller_ad839c30ee296cfa982923261103473e8}{but}
+\item 
+I\-B\-Outlet U\-I\-Web\-View $\ast$ \hyperlink{interface_view_controller_ab7e91cb8cf4ad3747ee6a634897a9f2f}{webview}
+\end{DoxyCompactItemize}
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_view_controller_a594064ed32a3f907d3055adb615b8662}{\index{View\-Controller@{View\-Controller}!did\-Receive\-Memory\-Warning@{did\-Receive\-Memory\-Warning}}
+\index{did\-Receive\-Memory\-Warning@{did\-Receive\-Memory\-Warning}!ViewController@{View\-Controller}}
+\subsubsection[{did\-Receive\-Memory\-Warning}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) did\-Receive\-Memory\-Warning 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_view_controller_a594064ed32a3f907d3055adb615b8662}
+
+
+default did\-Receive\-Memory\-Warning 
+
+Nothing implemented \hypertarget{interface_view_controller_a6bf5e01d692477bccb7fd038adf226cb}{\index{View\-Controller@{View\-Controller}!test\-Javascript\-:@{test\-Javascript\-:}}
+\index{test\-Javascript\-:@{test\-Javascript\-:}!ViewController@{View\-Controller}}
+\subsubsection[{test\-Javascript\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) test\-Javascript\-: 
+\begin{DoxyParamCaption}
+\item[{(id)}]{sender}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_view_controller_a6bf5e01d692477bccb7fd038adf226cb}
+
+
+Call triggered by the test button. 
+
+Calls the javascript function say\-Hello() inside the loaded content
+
+
+\begin{DoxyParams}{Parameters}
+{\em sender} & The sender of the call \\
+\hline
+\end{DoxyParams}
+\hypertarget{interface_view_controller_aa8418c79310bb5f7235485aae32296e7}{\index{View\-Controller@{View\-Controller}!view\-Did\-Load@{view\-Did\-Load}}
+\index{view\-Did\-Load@{view\-Did\-Load}!ViewController@{View\-Controller}}
+\subsubsection[{view\-Did\-Load}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) view\-Did\-Load 
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_view_controller_aa8418c79310bb5f7235485aae32296e7}
+
+
+view\-Did\-Load executed when the view has loaded 
+
+The webview is setup by assigning a delegate and request to load. The test button's action is setup to the selector test\-Javascript\-:
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See Also}
+\hyperlink{interface_view_controller_a6bf5e01d692477bccb7fd038adf226cb}{-\/ test\-Javascript\-:}sender 
+
+\hyperlink{interface_view_controller_a2de1bcd263bb715f7a8edc6c2a658a9e}{-\/ web\-View\-Did\-Finish\-Load\-:}web\-View 
+
+web\-View\-:(\-U\-I\-Web\-View $\ast$)web\-View should\-Start\-Load\-With\-Request\-:(\-N\-S\-U\-R\-L\-Request $\ast$)request navigation\-Type\-:(\-U\-I\-Web\-View\-Navigation\-Type)navigation\-Type 
+\end{DoxySeeAlso}
+\hypertarget{interface_view_controller_a4176871569ddf10cd79a9fc6e5e340bb}{\index{View\-Controller@{View\-Controller}!web\-View\-:should\-Start\-Load\-With\-Request\-:navigation\-Type\-:@{web\-View\-:should\-Start\-Load\-With\-Request\-:navigation\-Type\-:}}
+\index{web\-View\-:should\-Start\-Load\-With\-Request\-:navigation\-Type\-:@{web\-View\-:should\-Start\-Load\-With\-Request\-:navigation\-Type\-:}!ViewController@{View\-Controller}}
+\subsubsection[{web\-View\-:should\-Start\-Load\-With\-Request\-:navigation\-Type\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (B\-O\-O\-L) web\-View\-: 
+\begin{DoxyParamCaption}
+\item[{(U\-I\-Web\-View $\ast$)}]{web\-View}
+\item[{shouldStartLoadWithRequest:(N\-S\-U\-R\-L\-Request $\ast$)}]{request}
+\item[{navigationType:(U\-I\-Web\-View\-Navigation\-Type)}]{navigation\-Type}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_view_controller_a4176871569ddf10cd79a9fc6e5e340bb}
+
+
+Webview delegate method called before loading a request. 
+
+Used to catch an attempt to load a custom scheme 'app\-://test' to communicate from Javascript to Objective C. Launches a U\-I\-Alert\-View to confirm communication from Javascript to Objective C
+
+
+\begin{DoxyParams}{Parameters}
+{\em web\-View} & The Web\-View that has finished loading the request \\
+\hline
+{\em request} & The request being loaded \\
+\hline
+{\em navigation\-Type} & Constant indicating the user’s action\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false when the custom scheme is detected, true otherwise. 
+\end{DoxyReturn}
+\hypertarget{interface_view_controller_a2de1bcd263bb715f7a8edc6c2a658a9e}{\index{View\-Controller@{View\-Controller}!web\-View\-Did\-Finish\-Load\-:@{web\-View\-Did\-Finish\-Load\-:}}
+\index{web\-View\-Did\-Finish\-Load\-:@{web\-View\-Did\-Finish\-Load\-:}!ViewController@{View\-Controller}}
+\subsubsection[{web\-View\-Did\-Finish\-Load\-:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) web\-View\-Did\-Finish\-Load\-: 
+\begin{DoxyParamCaption}
+\item[{(U\-I\-Web\-View $\ast$)}]{web\-View}
+\end{DoxyParamCaption}
+\hspace{0.3cm}{\ttfamily [implementation]}}}\label{interface_view_controller_a2de1bcd263bb715f7a8edc6c2a658a9e}
+
+
+Webview delegate method called when content on the Web\-View has finished loading. 
+
+Calls the javascript function set\-Host\-App('i\-O\-S') to tell the loaded content it is loaded inside an i\-O\-S Webview
+
+
+\begin{DoxyParams}{Parameters}
+{\em web\-View} & The Web\-View that has finished loading the request \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Property Documentation}
+\hypertarget{interface_view_controller_ad839c30ee296cfa982923261103473e8}{\index{View\-Controller@{View\-Controller}!but@{but}}
+\index{but@{but}!ViewController@{View\-Controller}}
+\subsubsection[{but}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (I\-B\-Outlet U\-I\-Button$\ast$) but\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [weak]}}}\label{interface_view_controller_ad839c30ee296cfa982923261103473e8}
+A button to trigger a javascript test call on the content loaded in the Web\-View \hypertarget{interface_view_controller_ab7e91cb8cf4ad3747ee6a634897a9f2f}{\index{View\-Controller@{View\-Controller}!webview@{webview}}
+\index{webview@{webview}!ViewController@{View\-Controller}}
+\subsubsection[{webview}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (I\-B\-Outlet U\-I\-Web\-View$\ast$) webview\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [nonatomic]}, {\ttfamily [weak]}}}\label{interface_view_controller_ab7e91cb8cf4ad3747ee6a634897a9f2f}
+The Web\-View that will load the test content 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Webview\-Test/\hyperlink{_view_controller_8h}{View\-Controller.\-h}\item 
+Webview\-Test/\hyperlink{_view_controller_8m}{View\-Controller.\-m}\end{DoxyCompactItemize}
